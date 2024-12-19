@@ -1,46 +1,98 @@
-import React from "react";
-import { FaHeart, FaShoppingCart } from "react-icons/fa"; // React Icons 사용
+import React, { useTransition } from 'react';
+import { IoIosSearch, IoIosHeart,IoIosHeartEmpty,IoIosCart } from 'react-icons/io';
+import styled from "styled-components";
 
-const Header = () => {
+function Header(props) {
+    const IconButton = styled.button`
+    color: #1F17FF;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 15px;
+    background-color: #F0F8FF;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ` 
+    const BasicButton = styled.button`
+        color: #fff;
+        font-size: 1rem;
+        background-color: #1F17FF;
+        border-radius: 10px;
+        border: none;
+        padding: 10px 10px;
+        width: 100px;
+    `
   return (
-    <header className="flex items-center justify-between bg-gray-100 px-6 py-4 shadow-md">
-      {/* 1. 로고 */}
-      <h1 className="text-2xl font-bold text-blue-600">
-        ZumulMarket
-      </h1>
-
+    <header
+      style={{
+        display: 'flex',
+        alignItems: "center",
+        justifyContent: "space around",
+        gap: '40px',
+        margin: '0 10vw',
+        padding: '20px 0',
+        backgroundColor:"#fff",
+      }}
+    >
+      {/* 1. 로고 h1 */}
+      <a href=""
+      onClick={(e)=>{e.preventDefault()}}
+      >
+        <div className="logo-box">
+          <h1 className="logo">
+            <img
+              src="/images/logo_ZomulMarket.png"
+              alt="조물마켓 로고"
+              style={{ width: '100%' }}
+            />
+          </h1>
+        </div>
+      </a>
       {/* 2. 검색바 */}
-      <div className="flex items-center w-1/2">
+      <div
+        className="serch-bar"
+        style={{
+          backgroundColor: '#F2F2F2',
+          padding: '10px 20px',
+          width: '70%',
+          borderRadius: '25px',
+        
+        }}
+      >
+        <IoIosSearch style={{marginRight:"10px"}}/>
         <input
           type="text"
-          placeholder="제목, 작품명, 태그 검색"
-          className="w-full px-4 py-2 text-sm rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          defaultValue={'제목, 작품명, 태그 검색'}
+          style={{ border: 'transparent', backgroundColor: 'transparent' }}
         />
       </div>
-
-      {/* 3. 아이콘 버튼 */}
-      <div className="flex items-center space-x-4">
-        {/* Favorite Icon */}
-        <button className="p-2 bg-gray-200 rounded-full hover:bg-gray-300">
-          <FaHeart className="text-purple-600" size={20} />
-        </button>
-        {/* Cart Icon */}
-        <button className="p-2 bg-gray-200 rounded-full hover:bg-gray-300">
-          <FaShoppingCart className="text-purple-600" size={20} />
-        </button>
+      {/* 3. icon 버튼(faivorit, cart) */}
+      <div className="icon-button-wrap"
+      style={{display:"flex", gap:"10px"}}
+      >
+      <IconButton>
+        <IoIosSearch/>
+      </IconButton>
+      <IconButton>
+        <IoIosCart/>
+      </IconButton>
       </div>
+      {/* 4. user 메뉴 로그인 전: 회원가입, 로그인 || 로그인(일반): 마이페이지, 로그아웃 || 로그인(판매자): 판매관리 추가*/}
+      <div className="button-wrap" style={{display:"flex", gap:"10px"}}>
+      <BasicButton>
+        회원가입
+      </BasicButton>
+      <BasicButton>
+        로그인
+      </BasicButton>
 
-      {/* 4. 회원 메뉴 */}
-      <div className="flex space-x-4">
-        <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-          회원가입
-        </button>
-        <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-          로그인
-        </button>
       </div>
     </header>
   );
-};
+}
 
 export default Header;
