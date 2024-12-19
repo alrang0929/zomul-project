@@ -1,46 +1,34 @@
 import React, { useTransition } from 'react';
-import { IoIosSearch, IoIosHeart,IoIosHeartEmpty,IoIosCart } from 'react-icons/io';
-import styled from "styled-components";
+import {
+  IoIosSearch,
+  IoIosHeart,
+  IoIosHeartEmpty,
+  IoIosCart,
+} from 'react-icons/io';
+import { BasicButton, IconButton } from '../../styles/Button';
+
 
 function Header(props) {
-    const IconButton = styled.button`
-    color: #1F17FF;
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 15px;
-    background-color: #F0F8FF;
-    width: 40px;
-    height: 40px;
-    padding: 5px;
-    border: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    ` 
-    const BasicButton = styled.button`
-        color: #fff;
-        font-size: 1rem;
-        background-color: #1F17FF;
-        border-radius: 10px;
-        border: none;
-        padding: 10px 10px;
-        width: 100px;
-    `
+  
   return (
     <header
       style={{
         display: 'flex',
-        alignItems: "center",
-        justifyContent: "space around",
+        alignItems: 'center',
+        justifyContent: 'space around',
         gap: '40px',
-        margin: '0 10vw',
-        padding: '20px 0',
-        backgroundColor:"#fff",
+        // margin: '0 10vw',
+        padding: '20px 10vw',
+        backgroundColor: '#fff',
+        width: '100%',
       }}
     >
       {/* 1. 로고 h1 */}
-      <a href=""
-      onClick={(e)=>{e.preventDefault()}}
+      <a
+        href=""
+        onClick={(e) => {
+          e.preventDefault();
+        }}
       >
         <div className="logo-box">
           <h1 className="logo">
@@ -60,10 +48,10 @@ function Header(props) {
           padding: '10px 20px',
           width: '70%',
           borderRadius: '25px',
-        
+          display:"flex",
         }}
       >
-        <IoIosSearch style={{marginRight:"10px"}}/>
+        <IoIosSearch style={{ marginRight: '10px' }} />
         <input
           type="text"
           defaultValue={'제목, 작품명, 태그 검색'}
@@ -71,25 +59,21 @@ function Header(props) {
         />
       </div>
       {/* 3. icon 버튼(faivorit, cart) */}
-      <div className="icon-button-wrap"
-      style={{display:"flex", gap:"10px"}}
+      <div
+        className="icon-button-wrap"
+        style={{ display: 'flex', gap: '10px' }}
       >
-      <IconButton>
-        <IoIosSearch/>
-      </IconButton>
-      <IconButton>
-        <IoIosCart/>
-      </IconButton>
+        <IconButton>
+          <IoIosSearch />
+        </IconButton>
+        <IconButton>
+          <IoIosCart />
+        </IconButton>
       </div>
       {/* 4. user 메뉴 로그인 전: 회원가입, 로그인 || 로그인(일반): 마이페이지, 로그아웃 || 로그인(판매자): 판매관리 추가*/}
-      <div className="button-wrap" style={{display:"flex", gap:"10px"}}>
-      <BasicButton>
-        회원가입
-      </BasicButton>
-      <BasicButton>
-        로그인
-      </BasicButton>
-
+      <div className="button-wrap" style={{ display: 'flex', gap: '10px' }}>
+        <BasicButton style={{width:"100px"}}>회원가입</BasicButton>
+        <BasicButton style={{width:"100px"}}>로그인</BasicButton>
       </div>
     </header>
   );
