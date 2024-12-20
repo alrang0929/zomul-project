@@ -20,7 +20,8 @@
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.0.2",
     "routes": "^2.1.0",
-    "shadcn-ui": "^0.9.4",
+    "shadcn-ui": "^0.9.4",yarn add sass
+    "styled-components": "^6.1.13",
     "swiper": "^11.1.15",
     "tailwindcss": "^3.4.17",
     "zustand": "^5.0.2"
