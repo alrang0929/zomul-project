@@ -1,0 +1,9 @@
+
+// px단위를 rem으로 변경경
+@function px-to-rem($px-value, $base-font-size: 16) {
+    @if not unitless($px-value) {
+      @return ($px-value / $base-font-size) * 1rem;
+    } @else {
+      @return $px-value; // 기본 값 반환
+    }
+  }

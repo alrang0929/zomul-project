@@ -1,6 +1,7 @@
 // src/api/kakaoAuth.js
 
-const APP_KEY = "a85abf667f8f376bb8a26dafcb787c67";
+const APP_KEY = process.env.REACT_APP_KAKAO_JS_KEY;
+console.log("APP_KEY",APP_KEY);
 
 // Kakao SDK 초기화 함수
 export const initializeKakao = () => {

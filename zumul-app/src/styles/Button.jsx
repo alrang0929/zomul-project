@@ -20,7 +20,7 @@ const IconButton  = styled.button`
     background-color: ${({ bgcolor }) => bgcolor || "#1f17ff"};
     border-radius: 10px;
     border: none;
-    padding: 12px 10px;
+    padding: 10px 5px;
   `;
 
   export {BasicButton, IconButton};

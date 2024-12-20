@@ -19,8 +19,6 @@ const Login = () => {
             position: 'absolute',
             top: '0',
             left: '0',
-            // backdropFilter: 'blur(10px)',
-            // WebkitBackdropFilter: 'blur(10px)',
             zIndex: -999,
           }}
         ></div>

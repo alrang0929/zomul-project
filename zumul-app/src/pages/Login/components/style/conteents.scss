@@ -1,0 +1,33 @@
+.login-page {
+  .text-wrap {
+   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 3rem 0;
+    flex-direction: column;
+
+    width: 50rem;
+    text-align: center;
+    line-height: 1.5;
+    .text{
+        color: #fff;
+        text-align: center;
+        font-size: 1.8rem;
+        span{
+            display: block;
+        }
+    }
+  }
+  #kakao-login-btn{
+    margin: 0 auto;
+    background-color: #FFED67;
+    width: 30rem;
+    padding: 1rem 0;
+    border-radius: 999px;
+    color: #131313;
+    font-weight: 600;
+  }
+} //ligin-page
