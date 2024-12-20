@@ -1,0 +1,7 @@
+아이콘 라이브러리:
+import {
+  IoIosSearch,
+  IoIosHeart,
+  IoIosHeartEmpty,
+  IoIosCart,
+} from 'react-icons/io';

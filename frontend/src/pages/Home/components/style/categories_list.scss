@@ -1,0 +1,31 @@
+.categories-list {
+  height: 200px;
+  position: relative;
+  .button-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    button {
+      background-color: #e0e0e0;
+      width: 7rem;
+      padding: 20px;
+      border-radius: 999px;
+      margin-left: 20px;
+
+      .icon {
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 10px;
+        font-size: 40px;
+        color: #131313;
+      }
+      span {
+        color: #131313;
+        display: block;
+        font-size: 0.9rem;
+        font-weight: 400;
+      }
+    }
+  } // button-wrap
+}

@@ -18,7 +18,7 @@ const IconButton  = styled.button`
     color: #fff;
     font-size: 1rem;
     background-color: ${({ bgcolor }) => bgcolor || "#1f17ff"};
-    border-radius: 10px;
+    border-radius: 999px;
     border: none;
     padding: 10px 5px;
   `;

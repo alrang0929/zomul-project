@@ -14,7 +14,7 @@ const App = () => (
     <Routes>
       {/* MainLayout 아래에 자식 라우트 정의 */}
       <Route path="/" element={<MainLayout />}>
-        <Route index element={<Login />} />
+        <Route index element={<Home />} />
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<Signup />} />
         <Route path="cart" element={<Cart />} />
